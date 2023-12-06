@@ -128,7 +128,7 @@ p {
 
 #popup {
   background: #201E1F;
-  padding: 20px;
+  padding: 20px 150px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -178,3 +178,46 @@ input[type="submit"]:hover {
     transform: translateY(0%);
   }
 }
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  section  {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section p{
+    font-size: 1rem;
+  }
+
+  .logo2{
+    width: 50%;
+    height: 50%;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .row{
+    display: flex;
+    flex-wrap: column;
+  }
+}
+
+
