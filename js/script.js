@@ -1,17 +1,34 @@
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("scroll", function() {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.clientHeight;
+      const isVisible = window.scrollY > top - height * 0.5 && window.scrollY < top + height * 0.5;
+      if (isVisible) {
+        section.classList.add("show");
       } else {
-        reveals[i].classList.remove("active");
+        section.classList.remove("show");
       }
-    }
+    });
+  });
+});
+
+// POPUP 
+
+const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('close-btn');
+
+  function openPopup() {
+    overlay.style.display = 'flex';
   }
-  
-  window.addEventListener("scroll", reveal);
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      overlay.style.display = 'none';
+    }
+  });
