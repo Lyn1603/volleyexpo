@@ -71,7 +71,8 @@ p {
 .row{
   display: flex;
   flex-wrap: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5%;
   align-items: center;
 }
 
@@ -185,7 +186,7 @@ input[type="submit"]:hover {
 }
 
 
-/* CARROUSEL */
+/* GALERIE */
 
 .carousel {
   position: relative;
@@ -196,13 +197,14 @@ input[type="submit"]:hover {
 .carousel-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 30px;
   transition: transform 0.3s ease-in-out;
 }
 
 .carousel img {
-  width: 30%;
-  height:65vh;
+  width: 15vw;
+  
 }
 
 .carousel-prev,
