@@ -52,6 +52,11 @@ p {
   height: 60vh;
 }
 
+.plan{
+  width: 50vw;
+  height: 60vh;
+}
+
 .container {
   width: 100%;
   height: 70vh;
@@ -180,6 +185,47 @@ input[type="submit"]:hover {
 }
 
 
+/* CARROUSEL */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel img {
+  width: 30%;
+  height:65vh;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+
 
 /* Responsive */
 
@@ -223,6 +269,25 @@ input[type="submit"]:hover {
     display: flex;
     flex-wrap: column;
   }
-}
+
+  .carousel img {
+    width: 30%;
+    height:35vh;
+  }
+
+  .plan {
+    width: 100%;
+    height:35vh;
+  }
+
+  #popup {
+    background: #201E1F;
+    padding: 5px 70px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 10%;
+  }
+} 
 
 
